@@ -3,7 +3,7 @@
     interpolate or extrapolate the fourth ordinate(s) using a polynomial or a rational approach.
     
         quadratic(pt₁, pt₂, pt₃, x)
-        thiele3(pt₁, pt₂, pt₃, x)
+        thiele(pt₁, pt₂, pt₃, x)
 =#
 
 function quadratic(pt₁, pt₂, pt₃, x)
