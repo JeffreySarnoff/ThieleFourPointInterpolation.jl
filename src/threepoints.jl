@@ -42,8 +42,8 @@ function quadratic(pt₁x, pt₂x, pt₃x, pt₁y, pt₂y, pt₃y, x)
 end
 
 
-function thiele3(pt₁, pt₂, pt₃, x)
-    result = thiele3(pt₁[1], pt₂[1], pt₃[1],
+function thiele(pt₁, pt₂, pt₃, x)
+    result = thiele(pt₁[1], pt₂[1], pt₃[1],
                      pt₁[2:end], pt₂[2:end], pt₃[2:end], x)
     # check for degenerate case
     if !all(isfinite.(result))
@@ -52,7 +52,7 @@ function thiele3(pt₁, pt₂, pt₃, x)
     return result
 end
 
-function thiele3(pt₁x, pt₂x, pt₃x, pt₁y, pt₂y, pt₃y, x)
+function thiele(pt₁x, pt₂x, pt₃x, pt₁y, pt₂y, pt₃y, x)
     t1 = @. pt₁y - pt₂y
     t2 = @. pt₂y - pt₃y
     t1 = @. inv(t1)
